@@ -1,0 +1,14 @@
+.library{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 16px;
+}
+
+.libraryTitle{
+    grid-column-start: 1/span 12;
+}
+
+.librarySubtitle{
+    grid-column: 1/span 8;
+    border-bottom: 2px solid $detail-color;
+}
