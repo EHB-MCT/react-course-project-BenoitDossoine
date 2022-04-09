@@ -1,9 +1,11 @@
+.libraryTileContainer{
+    background-color: $tile-color;  
+    margin-bottom: 50px;
+}
+
 .libraryTile{
     position: relative;
     height: 216px;
-    margin-bottom: 50px;
-
-    background-color: $tile-color;  
 
     display: flex;
     flex-direction: row;

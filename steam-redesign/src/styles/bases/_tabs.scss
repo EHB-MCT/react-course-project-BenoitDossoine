@@ -1,0 +1,13 @@
+.tab{
+    &.MuiButtonBase-root.MuiTab-root {
+        color: $text-color;
+        border-bottom: $detail-color;
+    }
+}
+
+.tabContainer{
+    & .MuiTabs-indicator{
+        background-color: $detail-color;
+        box-shadow: 0 0 5px $detail-color;
+    }
+}
