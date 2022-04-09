@@ -1,0 +1,7 @@
+function getRandomDate(start:Date,end:Date){
+    let date = new Date(start.getTime() + Math.random()* (end.getTime() - start.getTime()));
+    console.log(date);
+    return date;
+}
+
+export {getRandomDate}
