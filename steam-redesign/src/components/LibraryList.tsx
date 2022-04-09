@@ -14,8 +14,6 @@ function LibraryList(){
     },[]);
 
     const renderLibraryList = (libraryGames:any) => {
-        console.log(libraryGames.response.games);
-        // return "This is a game";
         return libraryGames.response.games.map((game:any)=>{
             return(<LibraryTile key={game.appid} game={game}/>)
         })
