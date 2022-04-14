@@ -1,0 +1,12 @@
+.gameGraphsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &>div:not(.graphTabContainer){
+        width: 80%;
+    }
+}
+

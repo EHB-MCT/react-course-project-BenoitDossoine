@@ -4,7 +4,7 @@ function GameStatsTab(props:any){
     return(
         <div
         hidden={value!==index}>
-            This is tab {index}!
+            {children}
         </div>
     )
 }

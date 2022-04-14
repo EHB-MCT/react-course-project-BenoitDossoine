@@ -13,7 +13,6 @@ function LibraryTile(props:any){
             .then(response => setGameInfo(response[props.game.appid]))
             .then(()=>setIsLoading(false))
             .catch(error => console.log(error));
-        
     },[props.game.appid]);
 
     const handleClick = ()=>{
@@ -21,7 +20,7 @@ function LibraryTile(props:any){
     }
     
     const renderTile = (gameInfo:any)=>{
-        console.log(props);
+        // console.log(props);
         let lastPlayed = getRandomDate(new Date(2022,2,1), new Date());
         return (
             <div className="libraryTile">

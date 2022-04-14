@@ -2,7 +2,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import React from 'react';
 import GameStatsTab from './GameStatsTab';
-
+import GameGraphs from './GameGraphs';
 function GameStats(){
     const [tabValue,setTabValue] = React.useState(0);
 
@@ -16,7 +16,7 @@ function GameStats(){
                 <Tab className="tab" label="Statistics"/>
                 <Tab className="tab" label="Achievements"/>
             </Tabs>
-            <GameStatsTab value={tabValue} index={0}></GameStatsTab>
+            <GameStatsTab value={tabValue} index={0}> <GameGraphs></GameGraphs> </GameStatsTab>
             <GameStatsTab value={tabValue} index={1}></GameStatsTab>
         </div>
         
