@@ -8,15 +8,15 @@ function LibraryTile(props:LibraryGame){
     console.log(props);
     const [isLoading, setIsLoading] = React.useState(false);
     const [showStats, setShowStats] = React.useState(true);
-    const [gameInfo,setGameInfo] = React.useState({});
-
+    
     const handleClick = ()=>{
         setShowStats(!showStats);
     }
     
+    let lastPlayed = getRandomDate(new Date(2022,2,1), new Date());
+    
     const renderTile = (gameInfo:any)=>{
         // console.log(props);
-        let lastPlayed = getRandomDate(new Date(2022,2,1), new Date());
         return (
             <div className="libraryTile">
                 <img src={`${gameInfo.header_image}`} alt="" />

@@ -1,31 +1,44 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import LibraryGame from "../interfaces/LibraryGame";
 import { gameService } from "../services/GamesService";
+import { fetchGameList, fetchGameListSuccess } from "../Store/Games/Actions";
+import { selectGameList, selectLoadingStatus } from "../Store/Games/Selector";
+import { StoreState } from "../Store/store.types";
 import LibraryTile from "./LibraryTile";
 
 function LibraryList(){
-    const [isLoading, setIsLoading] = React.useState(true);
-    const [libraryGames,setLibraryGames] = React.useState([] as LibraryGame[]);
+    const [isLoading, setIsLoading] = React.useState(false);
+    // const [libraryGames,setLibraryGames] = React.useState([] as LibraryGame[]);
+
+    const libraryGames = useSelector<StoreState,LibraryGame[]>(
+        selectGameList
+    );
+
+    const loadingStatus = useSelector<StoreState, boolean>(
+        selectLoadingStatus
+    );
+
+    const dispatch = useDispatch();
 
     React.useEffect(()=>{
-        gameService.getLibraryGames()
-            .then(response => setLibraryGames(response))
-            .then(()=>setIsLoading(false))
-            .catch(error => console.log(error));
-    },[]);
+        if(libraryGames.length == 0){
+            dispatch(fetchGameList());
+            gameService.getLibraryGames()
+                .then(response => dispatch(fetchGameListSuccess(response)));
+        }
+    },[dispatch]);
 
     const renderLibraryList = (libraryGames:LibraryGame[]) => {
-        console.log(libraryGames);
         return libraryGames.map((game:LibraryGame)=>{
             return(<LibraryTile key={game.appid} {...game}/>)
         })
     };
 
-    
+    console.log(loadingStatus);
     return (
         <div className="libraryList">
-
-            {isLoading?
+            {loadingStatus?
             "This page is loading":
             renderLibraryList(libraryGames)}
         </div>
