@@ -1,6 +1,9 @@
 .libraryTileContainer{
     background-color: $tile-color;  
     margin-bottom: 50px;
+
+    border-radius: $border-radius;
+    overflow: hidden;
 }
 
 .libraryTile{
