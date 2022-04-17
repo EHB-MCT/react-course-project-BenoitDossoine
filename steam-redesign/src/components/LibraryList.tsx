@@ -1,10 +1,11 @@
 import React from "react";
+import LibraryGame from "../interfaces/LibraryGame";
 import { gameService } from "../services/GamesService";
 import LibraryTile from "./LibraryTile";
 
 function LibraryList(){
     const [isLoading, setIsLoading] = React.useState(true);
-    const [libraryGames,setLibraryGames] = React.useState([]);
+    const [libraryGames,setLibraryGames] = React.useState([] as LibraryGame[]);
 
     React.useEffect(()=>{
         gameService.getLibraryGames()
@@ -13,9 +14,10 @@ function LibraryList(){
             .catch(error => console.log(error));
     },[]);
 
-    const renderLibraryList = (libraryGames:any) => {
-        return libraryGames.response.games.map((game:any)=>{
-            return(<LibraryTile key={game.appid} game={game}/>)
+    const renderLibraryList = (libraryGames:LibraryGame[]) => {
+        console.log(libraryGames);
+        return libraryGames.map((game:LibraryGame)=>{
+            return(<LibraryTile key={game.appid} {...game}/>)
         })
     };
 
