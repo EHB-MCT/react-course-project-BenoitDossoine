@@ -35,7 +35,6 @@ function LibraryList(){
         })
     };
 
-    console.log(loadingStatus);
     return (
         <div className="libraryList">
             {loadingStatus?

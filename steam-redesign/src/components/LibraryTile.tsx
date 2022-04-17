@@ -37,7 +37,7 @@ function LibraryTile(props:LibraryGame){
             <p>Loading...</p>:
             renderTile(props)}
             {showStats?
-            <GameStats/>:
+            <GameStats {...props.achievements}/>:
             null
             }
         </div>

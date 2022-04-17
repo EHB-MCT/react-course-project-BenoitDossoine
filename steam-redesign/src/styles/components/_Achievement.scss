@@ -1,0 +1,19 @@
+.achievementContainer{
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 10px;
+}
+
+.achievement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &>img{
+        width: 132px;
+    }
+    &>p{
+        font-size: 20px;
+    }
+}
+
