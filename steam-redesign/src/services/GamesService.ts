@@ -1,4 +1,5 @@
 import UserGame from "../interfaces/UserGame";
+import { getRandomDate } from "../utils/randomDate";
 
 class GamesService{
     private userId = "76561198090377206"
@@ -26,6 +27,7 @@ class GamesService{
                 appid: game.appid,
                 img_icon_url:game.img_icon_url,
                 playtime_forever: game.playtime_forever,
+                last_played: getRandomDate(new Date(2022,2,1), new Date()),
                 ...gameInfo
             };
             return completeGame
