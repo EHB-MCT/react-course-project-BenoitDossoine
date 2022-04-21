@@ -9,17 +9,7 @@ class GamesService{
             .then(response => response.json())
             .then(data => data.response.games);
         
-        // let games = await tempGames.map(async (game:UserGame) =>{
-        //     let gameInfo = await this.getGameInfo(game.appid);
-            
-        //     let completeGame = {
-        //         img_icon_url:game.img_icon_url,
-        //         playtime_forever: game.playtime_forever,
-        //         ...gameInfo
-        //     };
-        //     return completeGame;
-        // })
-        
+                
         let gamePromise = await tempGames.map(async (game:UserGame) => {
             let gameInfo = await this.getGameInfo(game.appid)
             
