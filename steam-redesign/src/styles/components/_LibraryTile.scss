@@ -33,6 +33,22 @@
     right: 20px;
     bottom: 20px;
 
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+
+    font-size: 40px;
+    color: $detail-color;
+
+    height: 40px;
+
+    cursor: pointer;
+
+    &>svg{
+        filter: drop-shadow(0 0 2px $detail-color);
+        -webkit-filter: drop-shadow(0 0 2px $detail-color-transparent);
+
+    }
 }
 
 

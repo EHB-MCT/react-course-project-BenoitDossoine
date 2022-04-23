@@ -1,20 +1,25 @@
 import React from "react";
+import { motion, TapInfo } from "framer-motion"
+import {IoIosArrowDown} from "react-icons/io";
+
 import LibraryGame from "../interfaces/LibraryGame";
 import GameStats from "./GameStats";
 
 function LibraryTile(props:LibraryGame){
-    console.log(props);
-    const [isLoading, setIsLoading] = React.useState(false);
     const [showStats, setShowStats] = React.useState(false);
     
-    const handleClick = ()=>{
+    const handleClick = (event:MouseEvent, info:TapInfo)=>{
         setShowStats(!showStats);
+    }
+
+    const variants = {
+        open: {rotate:180},
+        closed:  {rotate:0}
     }
     
     
     
     const renderTile = (gameInfo:any)=>{
-        // console.log(props);
         return (
             <div className="libraryTile">
                 <img src={`${gameInfo.header_image}`} alt="" />
@@ -23,17 +28,22 @@ function LibraryTile(props:LibraryGame){
                     <p>Total playtime: {`${gameInfo.playtime_forever}`} hours</p>
                     <p>Last played: {gameInfo.last_played.toLocaleDateString()}</p>
                 </div>
-                <div className="dropdownBtn" onClick={handleClick}>More stats</div>
+
+                <motion.button
+                className="dropdownBtn"
+                onTap={handleClick}
+                animate={showStats?"open":"closed"}
+                variants = {variants}
+                >
+                    <IoIosArrowDown/>
+                </motion.button>
             </div>
-            
         )
     }
     
     return(
         <div className="libraryTileContainer">
-            {isLoading?
-            <p>Loading...</p>:
-            renderTile(props)}
+            {renderTile(props)}
             {showStats?
             <GameStats {...props.achievements}/>:
             null
