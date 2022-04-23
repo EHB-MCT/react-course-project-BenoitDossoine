@@ -1,9 +1,76 @@
 .header{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 300;
+
 }
 
-.header>a{
-    text-decoration: none;
-    color: $text-color;
+.header-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.header-left{
+    width: 20%;
+    &>a{
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $text-color;
+        padding-bottom: 2px;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $detail-color;
+
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.2s ease;
+        }
+        &:hover:after{
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+
+    }
+}
+
+.header-logo{
+    font-size: 40px;
+    height: 40px;
+
+    color: $detail-color;
+
+    &>svg{
+        filter: drop-shadow(0 0 3px $detail-color-transparent);
+    }
+}
+
+.header-right{
+    width: 25%;
+    &>p{
+        margin: 0;
+        &>span{
+            text-transform: uppercase;
+            color: $detail-color;
+        }
+    }
+    & .header-icon{
+        font-size: 35px;
+        font-weight: 300;
+        color: $detail-color;
+        height: 35px;
+    }
+}
+

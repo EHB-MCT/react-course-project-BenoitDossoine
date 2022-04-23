@@ -6,9 +6,11 @@
 
 .libraryTitle{
     grid-column-start: 1/span 12;
+    margin: 0;
 }
 
 .librarySubtitle{
+    margin: 20px 0; 
     grid-column: 1/span 9;
 
     font-size: 25px;
