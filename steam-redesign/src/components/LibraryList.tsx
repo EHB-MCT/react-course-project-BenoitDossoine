@@ -6,6 +6,7 @@ import { fetchGameList, fetchGameListSuccess } from "../Store/Games/Actions";
 import { selectGameList, selectLoadingStatus } from "../Store/Games/Selector";
 import { StoreState } from "../Store/store.types";
 import LibraryTile from "./LibraryTile";
+import Loader from "./Loader";
 
 function LibraryList(){
     const [isLoading, setIsLoading] = React.useState(false);
@@ -38,7 +39,7 @@ function LibraryList(){
     return (
         <div className="libraryList">
             {loadingStatus?
-            "This page is loading":
+            <Loader/>:
             renderLibraryList(libraryGames)}
         </div>
     );

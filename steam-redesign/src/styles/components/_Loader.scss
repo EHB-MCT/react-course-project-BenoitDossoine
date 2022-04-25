@@ -1,0 +1,21 @@
+.loaderContainer{
+    overflow: hidden;
+}
+.loader{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+
+    margin-top: 100px;
+    
+    
+    &>svg{
+        width:100%;
+        font-size: 200px;
+    }
+}
+
+.loadingText{
+    text-align: center;
+    font-size: 30px;
+}
