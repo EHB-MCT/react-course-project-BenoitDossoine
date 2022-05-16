@@ -1,7 +1,7 @@
 .searchBarContainer{
     height: 50px;
     margin-bottom: 20px;
-    // width: 300px;
+    width: 300px;
     display: inline-block;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .searchForm:focus, .searchForm:hover{
-    width: 100%;
+    width: 30%;
 
     & .searchBar{
         display: block;
