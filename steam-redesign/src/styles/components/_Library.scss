@@ -27,3 +27,10 @@
         box-shadow: 0 0 5px $detail-color;
     }
 }
+
+.avatar{
+    display: inline-block;
+    grid-row: 3;
+    grid-column: 10/span 3;
+    width: 100%;
+}
