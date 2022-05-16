@@ -58,19 +58,12 @@
 }
 
 .header-right{
-    width: 30%;
     &>p{
         margin: 0;
         &>span{
             text-transform: uppercase;
             color: $detail-color;
         }
-    }
-    & .header-icon{
-        font-size: 35px;
-        font-weight: 300;
-        color: $detail-color;
-        height: 35px;
     }
 }
 
