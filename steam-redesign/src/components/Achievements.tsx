@@ -1,7 +1,5 @@
 function Achievements(props:any){
-    console.log(props);
     let achievements = props.highlighted;
-    console.log(achievements);
     return(
         <div className="achievementContainer">
             {achievements.map((achievement:any)=>{

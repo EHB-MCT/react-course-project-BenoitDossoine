@@ -11,7 +11,6 @@ function GameStats(props:object){
     const handleChange = (event:React.SyntheticEvent,newTabValue:number)=>{
         setTabValue(newTabValue);
     }
-    console.log(tabValue);
     return(
         <div className="gameStatsContainer">
             <Tabs className="tabContainer" value={tabValue} onChange={handleChange}>

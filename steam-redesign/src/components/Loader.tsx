@@ -1,6 +1,5 @@
 import {FaSteam} from "react-icons/fa";
 import { motion } from "framer-motion"
-import { lookup } from "dns";
 
 function Loader(){
 
