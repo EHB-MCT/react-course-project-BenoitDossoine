@@ -12,7 +12,7 @@ https://steamredesignreact.web.app/
 * fuse.js
 * react-icons
 * redux-thunk
-  
+
 ## Sources
 
 Implement fuzzy search in the application: <br>
@@ -20,4 +20,7 @@ https://fusejs.io/
 
 Import 3D model and rendering in React: <br>
 https://dev.to/nourdinedev/how-to-use-threejs-and-react-to-render-a-3d-model-of-your-self-4kkf
+
+General state management documentation: <br>
+https://redux.js.org/introduction/getting-started
 
