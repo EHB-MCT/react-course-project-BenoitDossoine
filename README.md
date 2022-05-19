@@ -1,1 +1,26 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7539160&assignment_repo_type=AssignmentRepo)
+# Steam redesign: React
+
+## Deployment
+The deployment was done via firebase.
+https://steamredesignreact.web.app/
+
+## Used packages
+* react-three
+* reduxjs
+* chart.js
+* framer-motion
+* fuse.js
+* react-icons
+* redux-thunk
+
+## Sources
+
+Implement fuzzy search in the application: <br>
+https://fusejs.io/
+
+Import 3D model and rendering in React: <br>
+https://dev.to/nourdinedev/how-to-use-threejs-and-react-to-render-a-3d-model-of-your-self-4kkf
+
+General state management documentation: <br>
+https://redux.js.org/introduction/getting-started
+
